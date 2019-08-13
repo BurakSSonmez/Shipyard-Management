@@ -1,0 +1,25 @@
+update calisan set c_adsoyad='Ömer Bulut' where c_adsoyad='Ahmet Sezer';
+
+select * from calisan,tershane where calisan.t_id= tershane.t_id;
+
+insert into calisan values(4,'Miraç Uymaz','Emekli',5000,2)  
+delete from calisan where c_adsoyad='Miraç Uymaz';
+
+select * from calisan cross join tershane;
+
+select * from calisan calis inner join tershane ts on ts.t_id=calis.t_id;
+
+select * from calisan where calisan."c_adsoyad" LIKE 'T%';
+
+
+ALTER TABLE tershane add ad varchar(20) 
+alter table tershane drop column ad
+
+select * from calisan where c_maas between 5000 and 10000;
+
+create table tuji(tuji_id int primary key,tuji_alan int);
+
+
+
+
+

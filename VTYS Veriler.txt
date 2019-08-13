@@ -1,0 +1,60 @@
+insert into tershane values(1,'Savaþ Gemisi')
+insert into tershane values(2,'Yolcu Gemisi')
+
+*************************************************
+
+insert into gemi values(1,1,100,1)
+insert into gemi values(2,2,500,2)
+
+***********************************************
+
+insert into calisan values(1,'Burak Sönmez','Mühendis',10000,1)
+insert into calisan values(2,'Turgay Karakoç','Mühendis',10000,2)
+insert into calisan values(3,'Ahmet Sezer','Ýþçi',2500,1)
+
+*****************************************************
+
+insert into yatakhane values(1,'Mühendis',100)
+insert into yatakhane values(2,'Ýþçi',400)
+insert into yatakhane values(3,'Yönetici',10)
+
+************************************************
+
+insert into ofis values(1,300000000,1)
+insert into ofis values(2,200000000,2)
+
+*************************************************
+
+insert into malzeme values(1,'Yemekhane',200)
+insert into malzeme values(2,'Demir',1000)
+insert into malzeme values(3,'Tahta',2000)
+
+************************************************
+
+insert into gider values(1,'Çalýþan Maaþlarý',500000)
+insert into gider values(2,'Malzemeler',1000000)
+
+*******************************************
+
+insert into harcanir values(1,1,1)
+insert into harcanir values(2,2,2)
+
+******************************************
+
+insert into gemiguvenlik values(1,'Ofis',5,1)
+insert into gemiguvenlik values(2,'Üretim',100,2)
+
+***************************************************
+
+insert into gelir values(1,'Gemi Satýþý',5000000,1)
+insert into gelir values(2,'Reklam',100000,2)
+
+****************************************************
+
+insert into depo values(1,'Mutfak',200,1)
+insert into depo values(2,'Ýnþaat',5000,2)
+
+*******************************************************
+
+insert into barýnýr values(1,1,1)
+insert into barýnýr values(2,2,2)

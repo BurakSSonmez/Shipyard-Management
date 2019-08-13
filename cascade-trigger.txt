@@ -1,0 +1,23 @@
+create table emekli(emekli_id int primary key references calisan(c_id) on delete cascade,emekli_adsoyad varchar,emekli_yili int);
+
+alter table calisan_emekli
+drop constraint calisan_emekli_emekli_id_pkey,
+add constraint calisan_emekli_emekli_id_pkey
+   primary key(emekli_id)
+   references calisan(c_id)
+on delete cascade;
+
+
+CREATE OR REPLACE FUNCTION log_urun_changes()
+RETURNS trigger AS
+$BODY$
+BEGIN
+IF NEW.ücret <> OLD.ücret THEN
+INSERT INTO fiyat_degisimi(ürünid,ilk_ücret,son_ücret)
+VALUES(OLD.ürünid,OLD. ilk_ücret,new. son_ücret);
+END IF;
+RETURN NEW;
+END;
+$BODY$
+language plpgsql;
+

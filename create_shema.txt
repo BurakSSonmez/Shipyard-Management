@@ -1,0 +1,16 @@
+CREATE SCHEMA þema;
+CREATE VIEW þema.calisan
+AS SELECT c_adsoyad,c_pozisyon
+   FROM calisan; 
+    select * from þema.calisan
+ 
+ 
+ 
+///// CREATE SCHEMA þema;
+CREATE VIEW þema.malzeme
+AS SELECT m_türü
+   FROM malzeme; /////////////////
+   
+    select * from þema.malzeme
+ 
+ 

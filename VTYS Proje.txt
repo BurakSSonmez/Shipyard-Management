@@ -1,0 +1,46 @@
+
+create table tershane(t_id int primary key,t_alan int)
+
+create table gemi(g_id int primary key, g_kapasite int, gtür int)
+
+craete table calisan(c_id int primary key,c_adsoyad varchar,c_pozisyon varchar,c_maas int)
+
+create table ofis(o_id int primary key,o_fiyat)
+
+create table gelir(gelir_id int primary key,gelir_türü varchar,gelir_miktarı int)
+
+create table gider(gider_id int primary key, gider_türü varchar,gider_miktarı int)
+
+create table yatakhane(y_id int primary key,y_calisan varchar,y_kapasite int)
+
+create table depo(d_id int primary key,d_tür varchar,d_adet int)
+
+create table malzeme(m_id int primary key,m_türü varchar,m_sayi int)
+
+create table gemiguvenlik(kamera_id int primary key,kamera_bulunanyer varchar,kamera_sayisi int)
+
+
+************************************************************************************************
+
+create table tershane(t_id int primary key,t_alan varchar)
+
+create table gemi(g_id int primary key, g_alan int, g_kapasite int,t_id int references tershane(t_id))
+
+create table calisan(c_id int primary key,c_adsoyad varchar,c_pozisyon varchar,c_maas int,t_id int references tershane(t_id))
+
+create table malzeme(m_id int primary key,m_türü varchar,m_sayi int)
+
+create table gider(gider_id int primary key, gider_türü varchar,gider_miktarı int)
+
+create table harcanir(harcanir_id int primary key,m_id int references malzeme(m_id),gider_id int references gider(gider_id))
+
+create table yatakhane(y_id int primary key,y_calisan varchar,y_kapasite int)
+
+create table barınır(b_id int primary key,c_id int references calisan(c_id),y_id int references yatakhane(y_id))
+
+create table depo(d_id int primary key,d_tür varchar,d_adet int,m_id int references malzeme(m_id))
+
+create table gemiguvenlik(kamera_id int primary key,kamera_bulunanyer varchar,kamera_sayisi int,t_id int references tershane(t_id))
+
+
+
